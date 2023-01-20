@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+
+  height: 100vh;
+}
+header {
+  display: flex; /* DISPOSIÇÃO DOS ELEMENTOS DENTRO DA CAIXA */
+  align-items: center; /* COMANDO UTILIZADO PARA ALINHAR OS ELEMENTOS DENNTRO DA CAIXA */
+  justify-content: space-between; /* COMANDO UTILIZADO PARA JUSTIFICAR OS ELEMENTOS, E DAR ESPAÇO ENTRE ELES */
+  padding: 48px; /* DEFINE A DISTÂNCIA ENTRE O CONTEÚDO DE UM ELEMENTO E SUAS BORDAS */
+  position: fixed; /* POSIÇÃO FIXADA AO MOVER A PÁGINA */
+  width: 100%; /* AO FIXAR NA LINHA DE CIMA O CABEÇALHO FICOU BAGUNÇADO */
+}
+
+button {
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* ESPAÇOS ENTRE OS ELEMENTS, NESTE CASO, ESTÁ SEND UTILIZADO PARA DAR ESPAÇO ENTRE O ICONE DE + E O TEXTO*/
+  font-family: "Inter"; /* FAMILIA DA FONTE */
+  font-weight: 600; /* PESO DA FONTE */
+  font-size: 16px; /* TAMAMNHO DA FONTE */
+  line-height: 125%; /* ALTURA DA LINHA */
+}
+
+#form-habits {
+  display: flex;
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column; /* COMANDO UTILIZADO PARA MUDAR A DIREÇÃO, E ALINHAR EM COLUNAS */
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+}
+
+input {
+  appearance: none; /* COMANDO UTILIZADO PARA TIRAR A APARENCIA PARA PERMITIR APLICAR A BORDA! */
+  -webkit-appearance: none; /* COMANDO UTILIZADO PARA TIRAR A APARENCIA PARA PERMITIR APLICAR A BORDA! */
+  width: 64px; /* LARGURA */
+  height: 64px; /* ALTURA */
+  border: 2px solid #27272a;
+  border-radius: 8px;
+  background: #18181b;
+}
+/* PSEUDO SELECTOR */
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+/* O COMANDO MEDIA FOI CRIADO AFIM DE REGULAR O TAMANHO DO BUTTON COM OS DISPOSITIVOS */
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+}
